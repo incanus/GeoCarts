@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38D84CF166794D3598B5260E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E4B15648224219A82D6035 /* libPods.a */; };
 		DD22E5B816A5E49000CBAC1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD22E5B716A5E49000CBAC1C /* UIKit.framework */; };
 		DD22E5BA16A5E49000CBAC1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD22E5B916A5E49000CBAC1C /* Foundation.framework */; };
 		DD22E5BC16A5E49000CBAC1C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD22E5BB16A5E49000CBAC1C /* CoreGraphics.framework */; };
@@ -17,11 +18,13 @@
 		DD22E5CC16A5E49000CBAC1C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD22E5CB16A5E49000CBAC1C /* Default@2x.png */; };
 		DD22E5CE16A5E49000CBAC1C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD22E5CD16A5E49000CBAC1C /* Default-568h@2x.png */; };
 		DD22E5D116A5E49000CBAC1C /* GCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD22E5D016A5E49000CBAC1C /* GCViewController.m */; };
-		DD22E5D416A5E49000CBAC1C /* GCViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD22E5D216A5E49000CBAC1C /* GCViewController_iPhone.xib */; };
-		DD22E5D716A5E49000CBAC1C /* GCViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD22E5D516A5E49000CBAC1C /* GCViewController_iPad.xib */; };
+		DD22E5E616A5E66300CBAC1C /* geocarts.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = DD22E5E516A5E66300CBAC1C /* geocarts.mbtiles */; };
+		DD22E5E916A5F71900CBAC1C /* GCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD22E5E816A5F71900CBAC1C /* GCDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12C172AF06564F81B96658D1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		92E4B15648224219A82D6035 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD22E5B316A5E49000CBAC1C /* GeoCarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoCarts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD22E5B716A5E49000CBAC1C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DD22E5B916A5E49000CBAC1C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,8 +40,9 @@
 		DD22E5CD16A5E49000CBAC1C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DD22E5CF16A5E49000CBAC1C /* GCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCViewController.h; sourceTree = "<group>"; };
 		DD22E5D016A5E49000CBAC1C /* GCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCViewController.m; sourceTree = "<group>"; };
-		DD22E5D316A5E49000CBAC1C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GCViewController_iPhone.xib; sourceTree = "<group>"; };
-		DD22E5D616A5E49000CBAC1C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GCViewController_iPad.xib; sourceTree = "<group>"; };
+		DD22E5E516A5E66300CBAC1C /* geocarts.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = geocarts.mbtiles; sourceTree = "<group>"; };
+		DD22E5E716A5F71900CBAC1C /* GCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDetailViewController.h; sourceTree = "<group>"; };
+		DD22E5E816A5F71900CBAC1C /* GCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 				DD22E5B816A5E49000CBAC1C /* UIKit.framework in Frameworks */,
 				DD22E5BA16A5E49000CBAC1C /* Foundation.framework in Frameworks */,
 				DD22E5BC16A5E49000CBAC1C /* CoreGraphics.framework in Frameworks */,
+				38D84CF166794D3598B5260E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +66,7 @@
 				DD22E5BD16A5E49000CBAC1C /* GeoCarts */,
 				DD22E5B616A5E49000CBAC1C /* Frameworks */,
 				DD22E5B416A5E49000CBAC1C /* Products */,
+				12C172AF06564F81B96658D1 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +84,7 @@
 				DD22E5B716A5E49000CBAC1C /* UIKit.framework */,
 				DD22E5B916A5E49000CBAC1C /* Foundation.framework */,
 				DD22E5BB16A5E49000CBAC1C /* CoreGraphics.framework */,
+				92E4B15648224219A82D6035 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -89,8 +96,9 @@
 				DD22E5C716A5E49000CBAC1C /* GCAppDelegate.m */,
 				DD22E5CF16A5E49000CBAC1C /* GCViewController.h */,
 				DD22E5D016A5E49000CBAC1C /* GCViewController.m */,
-				DD22E5D216A5E49000CBAC1C /* GCViewController_iPhone.xib */,
-				DD22E5D516A5E49000CBAC1C /* GCViewController_iPad.xib */,
+				DD22E5E716A5F71900CBAC1C /* GCDetailViewController.h */,
+				DD22E5E816A5F71900CBAC1C /* GCDetailViewController.m */,
+				DD22E5E516A5E66300CBAC1C /* geocarts.mbtiles */,
 				DD22E5BE16A5E49000CBAC1C /* Supporting Files */,
 			);
 			path = GeoCarts;
@@ -120,6 +128,7 @@
 				DD22E5AF16A5E49000CBAC1C /* Sources */,
 				DD22E5B016A5E49000CBAC1C /* Frameworks */,
 				DD22E5B116A5E49000CBAC1C /* Resources */,
+				7BA36D8E708D466CB23524AA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,12 +175,28 @@
 				DD22E5CA16A5E49000CBAC1C /* Default.png in Resources */,
 				DD22E5CC16A5E49000CBAC1C /* Default@2x.png in Resources */,
 				DD22E5CE16A5E49000CBAC1C /* Default-568h@2x.png in Resources */,
-				DD22E5D416A5E49000CBAC1C /* GCViewController_iPhone.xib in Resources */,
-				DD22E5D716A5E49000CBAC1C /* GCViewController_iPad.xib in Resources */,
+				DD22E5E616A5E66300CBAC1C /* geocarts.mbtiles in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7BA36D8E708D466CB23524AA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DD22E5AF16A5E49000CBAC1C /* Sources */ = {
@@ -181,6 +206,7 @@
 				DD22E5C416A5E49000CBAC1C /* main.m in Sources */,
 				DD22E5C816A5E49000CBAC1C /* GCAppDelegate.m in Sources */,
 				DD22E5D116A5E49000CBAC1C /* GCViewController.m in Sources */,
+				DD22E5E916A5F71900CBAC1C /* GCDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,22 +219,6 @@
 				DD22E5C116A5E49000CBAC1C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		DD22E5D216A5E49000CBAC1C /* GCViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD22E5D316A5E49000CBAC1C /* en */,
-			);
-			name = GCViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		DD22E5D516A5E49000CBAC1C /* GCViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD22E5D616A5E49000CBAC1C /* en */,
-			);
-			name = GCViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -268,6 +278,7 @@
 		};
 		DD22E5DB16A5E49000CBAC1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12C172AF06564F81B96658D1 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GeoCarts/GeoCarts-Prefix.pch";
@@ -279,6 +290,7 @@
 		};
 		DD22E5DC16A5E49000CBAC1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12C172AF06564F81B96658D1 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GeoCarts/GeoCarts-Prefix.pch";
@@ -307,6 +319,7 @@
 				DD22E5DC16A5E49000CBAC1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

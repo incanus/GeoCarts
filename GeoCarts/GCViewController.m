@@ -8,22 +8,74 @@
 
 #import "GCViewController.h"
 
-@interface GCViewController ()
-
-@end
+#import "GCDetailViewController.h"
 
 @implementation GCViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    self.title = @"GeoCarts";
+    
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+
+    RMMapView *mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:[[RMMBTilesSource alloc] initWithTileSetResource:@"geocarts" ofType:@"mbtiles"]];
+
+    mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
+    mapView.delegate = self;
+    
+    [mapView setZoom:13 atCoordinate:CLLocationCoordinate2DMake(45.519218, -122.676086) animated:NO];
+
+    [self.view addSubview:mapView];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)singleTapOnMap:(RMMapView *)map at:(CGPoint)point
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    RMMBTilesSource *tileSource = (RMMBTilesSource *)map.tileSource;
+
+    if ([tileSource respondsToSelector:@selector(supportsInteractivity)] && [tileSource supportsInteractivity])
+    {
+        NSString *content = [tileSource formattedOutputOfType:RMInteractiveSourceOutputTypeTeaser forPoint:point inMapView:map];
+
+        [map deselectAnnotation:map.selectedAnnotation animated:(content == nil)];
+        [map removeAllAnnotations];
+
+        if (content)
+        {
+            NSString *title = [[content componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] objectAtIndex:0];
+
+            RMAnnotation *annotation = [RMAnnotation annotationWithMapView:map coordinate:[map pixelToCoordinate:point] andTitle:title];
+
+            annotation.userInfo = content;
+
+            [map addAnnotation:annotation];
+
+            [map selectAnnotation:annotation animated:YES];
+        }
+    }
+}
+
+- (RMMapLayer *)mapView:(RMMapView *)mapView layerForAnnotation:(RMAnnotation *)annotation
+{
+    RMMarker *marker = [[RMMarker alloc] initWithMapBoxMarkerImage:@"pin" tintColor:[UIColor clearColor]];
+
+    marker.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+
+    marker.canShowCallout = YES;
+
+    return marker;
+}
+
+- (void)tapOnCalloutAccessoryControl:(UIControl *)control forAnnotation:(RMAnnotation *)annotation onMap:(RMMapView *)map
+{
+    GCDetailViewController *detailViewController = [GCDetailViewController new];
+
+    detailViewController.detailTitle       = annotation.title;
+    detailViewController.detailDescription = [annotation.userInfo stringByReplacingOccurrencesOfString:annotation.title withString:@""];
+
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end

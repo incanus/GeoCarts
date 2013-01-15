@@ -8,12 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class GCViewController;
-
 @interface GCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) GCViewController *viewController;
 
 @end

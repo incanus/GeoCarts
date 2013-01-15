@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GCViewController : UIViewController
+#import "MapBox.h"
+
+@interface GCViewController : UIViewController <RMMapViewDelegate>
 
 @end
