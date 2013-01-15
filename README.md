@@ -11,3 +11,5 @@ Requires [CocoaPods](http://cocoapods.org) to get up and running.
 See the companion map online here: https://tiles.mapbox.com/justin/map/geocarts
 
 See http://support.mapbox.com/discussions/mapbox-ios-sdk/675-annotation-callout-example for more. 
+
+![](https://raw.github.com/incanus/GeoCarts/master/screenshot.png)
