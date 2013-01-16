@@ -35,11 +35,10 @@
 {
     RMMBTilesSource *tileSource = (RMMBTilesSource *)map.tileSource;
 
-    if ([tileSource respondsToSelector:@selector(supportsInteractivity)] && [tileSource supportsInteractivity])
+    if ([tileSource conformsToProtocol:@protocol(RMInteractiveSource)] && [tileSource supportsInteractivity])
     {
         NSString *content = [tileSource formattedOutputOfType:RMInteractiveSourceOutputTypeTeaser forPoint:point inMapView:map];
 
-        [map deselectAnnotation:map.selectedAnnotation animated:(content == nil)];
         [map removeAllAnnotations];
 
         if (content)
