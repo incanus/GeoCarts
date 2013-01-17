@@ -8,7 +8,7 @@ Requires [CocoaPods](http://cocoapods.org) to get up and running.
 1. Open `GeoCarts.xcworkspace`. 
 1. *Build & Run*. 
 
-See the companion map online here: https://tiles.mapbox.com/justin/map/geocarts
+See the companion map online here: https://tiles.mapbox.com/justin/map/geocarts Note that it was not optimized for retina displays nor touch interaction. 
 
 See http://support.mapbox.com/discussions/mapbox-ios-sdk/675-annotation-callout-example for more. 
 

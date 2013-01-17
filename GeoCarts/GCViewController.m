@@ -22,6 +22,8 @@
 
     RMMapView *mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:[[RMMBTilesSource alloc] initWithTileSetResource:@"geocarts" ofType:@"mbtiles"]];
 
+    mapView.adjustTilesForRetinaDisplay = ([[UIScreen mainScreen] scale] > 1.0);
+
     mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
     mapView.delegate = self;
